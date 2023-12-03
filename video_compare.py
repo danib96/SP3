@@ -33,3 +33,6 @@ def show_2_videos(first_video,second_video):
             c.release()
 
     cv2.destroyAllWindows()
+
+####comparing the file we can see that the vp8 is the one with lower resolution, also just looking at the file size, however between the vp8 and vp9 the difference
+#### is not very noticeable
