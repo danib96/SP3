@@ -62,17 +62,3 @@ codecs.h625_conv('bbb1080x720.mp4')
 codecs.vp8_conv('bbb160x120.mp4')
 codecs.vp9_conv('bbb360x240.mp4')
 codecs.av1_conv('bbb640x480.mp4')
-
-###this is the function for exercise2
-def twovideos_onscreen(input_video1, input_video2):
-    compare = [
-        'ffmpeg',
-        '-i', input_video1,
-        '-i', input_video2,
-        '-filter_complex', f'blend=all_mode=difference',
-        '-crf', f'18',
-        'video_compare.mp4'
-    ]
-
-    sp.run(compare)
-twovideos_onscreen('vp8encoded.webm','vp9encoded.webm')
